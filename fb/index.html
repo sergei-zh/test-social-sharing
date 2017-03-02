@@ -1,35 +1,56 @@
 <html>
     <head>
 
+        <title>The New York Times</title>
 
-  <title>Our Sharing</title>
-    <!-- You can use Open Graph tags to customize link previews.
-    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-  <meta property="og:url"           content="https://sergei-zh.github.io/test-social-sharing/fb/index.html" />
-  <meta property="og:type"          content="article" />
-  <meta property="og:title"         content="Your Website Title 1" />
-  <meta property="og:description"   content="Your description 2" />
-  <meta property="og:image"         content="https://sergei-zh.github.io/test-social-sharing/fb/donation-fb.png" />
+        <meta property="og:url"           content="https://sergei-zh.github.io/test-social-sharing/fb/index.html" />
+        <meta property="og:type"          content="article" />
+        <meta property="og:title"         content="Support the mission of The Times." />
+        <meta property="og:description"   content="Your contribution will be matched on a one-to-one basis so that more students and schools can benefit." />
+        <meta property="og:image"         content="https://sergei-zh.github.io/test-social-sharing/fb/Image-Social_Share_FB_022317.png" />
 
+        <style>
+
+            .front-image {
+                border: none;
+                margin: 20px auto;
+                width: 95%;
+                max-width: 1200px;
+            }
+            
+            .main-section {
+                text-align:center;
+            }
+            
+            .waiting {
+                background: url(https://static01.nyt.com/subscriptions/components/img/misc/ajax_loader.gif);
+                background-size: 50px;
+                background-repeat: no-repeat;
+                background-position: center;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
 
     </head>
+
     <body>
-
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=704371669649582";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-
-<div class="fb-share-button" data-href="https://sergei-zh.github.io/test-social-sharing/fb/index.html" data-layout="button" data-size="large" data-mobile-iframe="false"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsergei-zh.github.io%2Ftest-social-sharing%2Ffb%2Findex.html&amp;src=sdkpreparse">Share</a></div>
-
-
-
-
-        <img src="./donation-fb.png">
+        <div class="waiting">
+        </div>
+        <div class="main-section">
+            <img src="./Image-Social_Share_FB_022317.png" alt="Support the mission of The Times." class="front-image">
+        </div>
+        
+        <script>
+            (function() {
+                function makeRedirect() {
+                    window.console.log('redirecting');
+                    /*window.location.href = 'https://www.nytimes.com';*/
+                }
+                setTimeout(makeRedirect, 3000);
+            })();
+        </script>
     </body>
+    
 </html>
